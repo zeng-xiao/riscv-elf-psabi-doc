@@ -634,8 +634,8 @@ both a `R_RISCV_CALL` or `R_RISCV_CALL_PLT` relocation and an `R_RISCV_RELAX`
 relocation indicating the instruction sequence can be relaxed during linking.
 
 Procedure call linker relaxation allows the `AUIPC+JALR` pair to be relaxed
-to the `JAL` instruction when the procedure or PLT entry is within (-1MiB to
-+1MiB-2) of the instruction pair.
+to the `JAL` instruction when the procedure or PLT entry is within [-1MiB+pc, pc,
++1MiB-2+pc] of the instruction pair.
 
 The pseudoinstruction:
 
